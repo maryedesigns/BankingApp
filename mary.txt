@@ -1,7 +1,0 @@
-Username: mary
-Password: 123456
-Email: mary@test.com
-Age: 22
-Phone: 08098787655
-Balance: 100000
-Transaction Summary:

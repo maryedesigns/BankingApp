@@ -152,7 +152,7 @@ namespace BankApp.App
                 foreach (Transactions transaction in transactions)
                 {
                     Console.WriteLine($"Username: {transaction.UserName}\tAmount: {transaction.Amount}\tDate: {transaction.Date}");
-                    Console.WriteLine("\n");
+                    
                 }
             }
 
@@ -173,7 +173,7 @@ namespace BankApp.App
                     while ((line = reader.ReadLine()) != null)
                     {
                         string[] fields = line.Split(new char[] { '|' }, StringSplitOptions.RemoveEmptyEntries);
-                        DateTime date = DateTime.ParseExact(fields[2], "M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture);
+                        DateTime date = DateTime.ParseExact(fields[2], "dd/MM/yyyy h:mm:ss tt", CultureInfo.InvariantCulture);
                         decimal amount = decimal.Parse(fields[1]);
                         Transactions transaction = new Transactions(username, amount, date);
                         transactions.Add(transaction);
